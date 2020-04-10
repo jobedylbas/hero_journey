@@ -1,0 +1,85 @@
+---
+title: "Plots to Hero Journey Movies Analysis"
+output: html_notebook
+---
+
+This is an example of how to plot the graphs of files.
+```{r include = F}
+# First, check if needed packages are installed and install them.
+pkgs <- c("igraph", "ggplot2")
+for (pkg in pkgs) {
+  if(!require(pkg, character.only = TRUE)) {
+    install.packages(pkg)
+    if (!require(pkg, character.only = TRUE)) stop("load failure: ", pkg)
+  }
+}
+
+library("igraph")
+library("ggplot2")
+```
+
+#### Simple Plot
+
+Here we have a plot with Lion King simple relationship. We started from here because is the network with less vertices and also have well defined characters, relationships, archetypes and genders. Some of relationships could be revised.
+
+
+```{r echo=FALSE}
+# Check if data files exists and load them.
+char_filename <- './data/archetypes/8587_characters.csv'
+lk_re_filename <- './data/relations/8587_relations.csv'
+
+# Load the file that contain gender and archetype of each character
+if(file.exists(char_filename)) {
+    lk_chars <- read.csv(char_filename, header = T, sep = ',')
+}
+
+# Return a color based on the edge relation number
+edgeColor <- function(number) {
+  switch(number+1, '', 'green', 'blue', 'red')
+}
+
+# Return a color based on gender number
+genderColor <- function(number) {
+  switch (number, 'red', 'blue', 'yellow')
+}
+
+if(file.exists(lk_re_filename)) {
+  lk_re_csv <- read.csv(lk_re_filename, header = T, sep = ',', row.names = 1)
+  lk_re_csv[is.na(lk_re_csv)] <- 0
+  g <- graph_from_adjacency_matrix(as.matrix(lk_re_csv), mode = c('undirected'),  weighted = T)
+  
+  # Color the edges according relations between vertices
+  for(edgeIndex in 1:length(E(g))) {
+    E(g)[edgeIndex]$color <- edgeColor(E(g)[edgeIndex]$weight)
+  }
+  
+  # Find the gender of each vertex and color them
+  for(vertexIndex in 1:length(V(g))) {
+    vertexName <- gsub(" ", "", as.character(V(g)[vertexIndex]$name), fixed =T)
+    char <- lk_chars[which(gsub(" ", "", (as.character(lk_chars$character_name)), fixed = T) == vertexName), ]
+    if(nrow(char)) {
+      V(g)[vertexIndex]$color <- genderColor(char$gender)
+    }
+  }
+  
+  g$layout <- layout_components
+  
+}
+# Plot the graph
+plot(g)
+```
+
+
+### Plot with communities
+
+```{r echo=F}
+c <- cluster_louvain(g)
+c <- cluster_fast_greedy(g)
+c <- cluster_infomap(g)
+c <- cluster_spinglass(g)
+c <- cluster_optimal(g)
+c <- cluster_walktrap(g)
+c <- cluster_leading_eigen(g)
+triad_census(g)
+plot(c, g)
+``` 
