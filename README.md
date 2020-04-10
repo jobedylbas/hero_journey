@@ -1,4 +1,4 @@
-# Analysis of Network on Hero Journey Movies 🍿
+# Network Analysis of Hero Journey Movies 🍿
 
 This repository aims to share files about the Networks in Hero Journey Movies.
 The movies are:
