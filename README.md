@@ -4,10 +4,11 @@ This repository aims to share files about the Networks in Hero Journey Movies.
 The movies are:
 
 - Star Wars (1977)
-- Lion King (1994)
-- Matrix (1999)
+- Men in Black (1997)
+- The Matrix (1999)
 - Harry Potter and Philosopher's stone (2001)
 - Spiderman (2002)
+- Hunger Games (2012)
 
 ### Prerequisites
 
