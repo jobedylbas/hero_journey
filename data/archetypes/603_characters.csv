@@ -13,7 +13,7 @@ movie_id, character_name, gender, archetype
 603,Dozer,2
 603,Mouse,2
 603,DuJour,1
-603,Rhineheart,0
+603,Rhineheart,2
 603,Choi,2
 603,Priestess,0
 603,Spoon Boy,2
@@ -35,3 +35,4 @@ movie_id, character_name, gender, archetype
 603,Cop,2
 603,Cop,1
 603,Parking Cop,2
+603,Shaylea,1
