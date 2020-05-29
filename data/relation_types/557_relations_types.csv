@@ -1,61 +1,51 @@
-chars,Peter Parker / Spider-Man,Norman Osborn / Green Goblin,Mary Jane Watson,Harry Osborn,May Parker,J. Jonah Jameson,Ben Parker,Flash Thompson,Joseph 'Robbie' Robertson,Carjacker,Betty Brant,Dr. Mendell Stromm,Bone Saw McGraw,Check-In Girl,Punk Rock Girl,Ring Announcer,Hoffman,Man in Fair,Herself,Stunts,Tugboat Captain,Maximilian Fargas,Simkins,Henry Balkan,General Slocum,Teacher,Houseman,Subway Guitarist,Cop at Carjacking,Lab Tour Guide,Wrestling Promoter,Wrestling Arena Guard,Flash's Crony,Doctor,Nurse,Heckler,Cop at Fire,Mother at Fire,Cabbie,Opinionated Cop,Surly Truck Driver,Philip Watson,Chaperone in Tram,Girl in Tram,Boy in Tram,Cop (uncredited),Colonel (uncredited),Crying Girl in Tram (uncredited),Kyle (uncredited),Spectator at School Fight (uncredited),World Unity Festival Attendant (uncredited),Mugger (uncredited),Screaming Wrestler (uncredited),Chef (uncredited),Young Thug #2 (uncredited),Project Coordinator,Madeline Watson,Billy's Mom,Fireman,Young Lady at Fire
-Peter Parker / Spider-Man,
-Norman Osborn / Green Goblin,
-Mary Jane Watson,
-Harry Osborn,
-May Parker,
-J. Jonah Jameson,
-Ben Parker,
-Flash Thompson,
-Joseph 'Robbie' Robertson,
-Carjacker,
-Betty Brant,
-Dr. Mendell Stromm,
-Bone Saw McGraw,
-Check-In Girl,
-Punk Rock Girl,
-Ring Announcer,
-Hoffman,
-Man in Fair,
-Herself,
-Stunts,
-Tugboat Captain,
-Maximilian Fargas,
-Simkins,
-Henry Balkan,
-General Slocum,
-Teacher,
-Houseman,
-Subway Guitarist,
-Cop at Carjacking,
-Lab Tour Guide,
-Wrestling Promoter,
-Wrestling Arena Guard,
-Flash's Crony,
-Doctor,
-Nurse,
-Heckler,
-Cop at Fire,
-Mother at Fire,
-Cabbie,
-Opinionated Cop,
-Surly Truck Driver,
-Philip Watson,
-Chaperone in Tram,
-Girl in Tram,
-Boy in Tram,
-Cop (uncredited),
-Colonel (uncredited),
-Crying Girl in Tram (uncredited),
-Kyle (uncredited),
-Spectator at School Fight (uncredited),
-World Unity Festival Attendant (uncredited),
-Mugger (uncredited),
-Screaming Wrestler (uncredited),
-Chef (uncredited),
-Young Thug #2 (uncredited),
-Project Coordinator,
-Madeline Watson,
-Billy's Mom,
-Fireman,
-Young Lady at Fire,
+chars,Peter Parker / Spider-Man,Norman Osborn / Green Goblin,Mary Jane Watson,Harry Osborn,May Parker,J. Jonah Jameson,Ben Parker,Flash Thompson,Joseph 'Robbie' Robertson,Carjacker,Betty Brant,Dr. Mendell Stromm,Bone Saw McGraw,Check-In Girl,Punk Rock Girl,Ring Announcer,Hoffman,Tugboat Captain,Maximilian Fargas,Simkins,Henry Balkan,General Slocum,Teacher,Subway Guitarist,Cop at Carjacking,Lab Tour Guide,Wrestling Promoter,Wrestling Arena Guard,Flash's Crony,Doctor,Nurse,Heckler,Cop at Fire,Mother at Fire,Cabbie,Opinionated Cop,Surly Truck Driver,Philip Watson,Chaperone in Tram,Girl in Tram,Boy in Tram,Crying Girl in Tram (uncredited),World Unity Festival Attendant (uncredited),Mugger (uncredited),Screaming Wrestler (uncredited),Project Coordinator,Madeline Watson,Billy's Mom,Fireman,Young Lady at Fire
+Peter Parker / Spider-Man,0,3,4,2,1,5,1,3,5,3,5,0,3,5,0,5,5,5,0,0,0,0,5,0,5,5,3,5,3,5,5,3,5,5,0,0,0,0,5,5,5,5,5,3,0,0,0,5,5,5
+Norman Osborn / Green Goblin,3,0,3,1,2,3,,,,,,5,,,0,,,,,5,5,5,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,
+Mary Jane Watson,4,3,0,2,,,,3,,,,,,,0,,,,,,,,,0,,,,,,,,,,,0,0,0,3,,,,,,,,,,0,,
+Harry Osborn,2,1,2,0,,,,3,,,,,,,0,,,,,5,,,,0,,,,,3,,,,,,0,0,0,,,,,,,,,,,0,,0
+May Parker,1,2,2,,0,0,1,0,,,,,,,0,,,,,,,,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+J. Jonah Jameson,5,3,,,,0,,,5,,5,,,,0,,5,,,,,,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Ben Parker,1,,,,,,0,,,,,,,,0,,,,,,,,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Flash Thompson,3,,3,3,,,,0,,,,,,,0,,,,,,,,,0,,,,,2,,,,,,0,0,0,,,,,,,,,,,0,,0
+Joseph 'Robbie' Robertson,5,,,,,5,,,0,,5,,,,0,,,,,,,,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Carjacker,3,,,,,,,,,0,,,,,0,,,,,,,,,0,,,3,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Betty Brant,5,0,,,,5,,,5,,0,,,,0,,,,,,,,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Dr. Mendell Stromm,0,5,,,,,,,,,,0,,,0,,,,5,,5,5,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Bone Saw McGraw,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+Check-In Girl,5,,,,,,,,,,,,,0,0,,,,,,,,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Punk Rock Girl,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Ring Announcer,5,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Hoffman,5,,,,,5,,,,,5,,,,0,,0,,,,,,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Tugboat Captain,5,,,,,,,,,,,,,,0,,,0,,,,,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Maximilian Fargas,0,5,,5,,,,,,,,5,,,0,,,,0,,5,,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Simkins,0,5,,5,,,,,,,,,,,0,,,,,0,,,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Henry Balkan,0,5,,,,,,,,,,5,,,0,,,,5,,0,,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+General Slocum,0,3,,,,,,,,,,5,,,0,,,,,,,0,,0,,,,,,,,,,,0,0,0,,,,,,,,,5,,0,,0
+Teacher,5,0,5,5,,,,5,,,,,,,0,,,,,,,,0,0,,,,,5,,,,,,0,0,0,,,,,,,,,,,0,,0
+Subway Guitarist,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cop at Carjacking,5,,,,,,,,,,,,,,0,,,,,,,,,0,0,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Lab Tour Guide,5,0,5,5,0,0,0,5,0,0,0,,0,0,0,0,0,,,,,,,0,,0,,,5,,,,,,0,0,0,,,,,,,,,,,0,,0
+Wrestling Promoter,3,,,,,,,,,3,,,,,0,,,,,,,,,0,,,0,5,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Wrestling Arena Guard,5,,,,,,,,,,,,,,0,,,,,,,,,0,,,5,0,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Flash's Crony,3,,,,,2,,,,,,,,,0,,,,,,,,,0,,,,,0,,,,,,0,0,0,,,,,,,,,,,0,,0
+Doctor,5,,,,,,,,,,,,,,0,,,,,,,,,0,,,,,,0,,,,,0,0,0,,,,,,,,,,,0,,0
+Nurse,5,,,,,,,,,,,,,,0,,,,,,,,,0,,,,,,,0,,,,0,0,0,,,,,,,,,,,0,,0
+Heckler,3,,,,,,,,,,,,,,0,,,,,,,,,0,,,,,,,,0,,,0,0,0,,,,,,,,,,,0,,0
+Cop at Fire,5,,,,,,,,,,,,,,0,,,,,,,,,0,,,,,,,,,0,5,0,0,0,,,,,,,,,,,0,5,5
+Mother at Fire,5,,,,,,,,,,,,,,0,,,,,,,,,0,,,,,,,,,5,0,0,0,0,,,,,,,,,,,0,5,5
+Cabbie,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Opinionated Cop,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Surly Truck Driver,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Philip Watson,0,,1,,,,,,,,,,,,0,,,,,,,,,0,,,,,,,,,,,0,0,0,0,,,,,,,,,1,0,,0
+Chaperone in Tram,5,,,,,,,,,,,,,,0,,,,,,,,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Girl in Tram,5,,,,,,,,,,,,,,0,,,,,,,,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Boy in Tram,5,,,,,,,,,,,,,,0,,,,,,,,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Crying Girl in Tram (uncredited),5,,,,,,,,,,,,,,0,,,,,,,,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+World Unity Festival Attendant (uncredited),5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Mugger (uncredited),3,,,,,,,,,,,,,,0,,,,,,,,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Screaming Wrestler (uncredited),0,,,,,,,,,,,,3,,0,,,,,,,,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Project Coordinator,0,,,,,,,,,,,,,,0,,,,,,,5,,0,,,,,,,,,,,0,0,0,,,,,,,,,,,0,,0
+Madeline Watson,0,,1,,,,,,,,,,,,0,,,,,,,,,0,,,,,,,,,,,0,0,0,1,,,,,,,,,,0,,0
+Billy's Mom,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fireman,5,,,,,,,,,,,,,,0,,,,,,,,,0,,,,,,,,,5,5,0,0,0,,,,,,,,,,,0,,
+Young Lady at Fire,5,,,,,,,,,,,,,,0,,,,,,,,,0,,,,,,,,,5,5,0,0,0,,,,,,,,,,,0,,

@@ -1,38 +1,34 @@
-chars,Thomas A. Anderson / Neo,Morpheus,Trinity,Agent Smith,Cypher,Oracle,Tank,Agent Brown,Agent Jones,Apoc,Switch,Dozer,Mouse,DuJour,Rhineheart,Choi,Priestess,Spoon Boy,Potential,Potential,Potential,Potential,Potential,Lieutenant,FedEx Man,Businessman,Woman in Red,Old Man,Blind Man,Security Guard,Guard,Cop Who Captures Neo,Big Cop,Cop,Cop,Parking Cop,Shaylea
-Thomas A. Anderson / Neo,
-Morpheus,
-Trinity,
-Agent Smith,
-Cypher,
-Oracle,
-Tank,
-Agent Brown,
-Agent Jones,
-Apoc,
-Switch,
-Dozer,
-Mouse,
-DuJour,
-Rhineheart,
-Choi,
-Priestess,
-Spoon Boy,
-Potential,
-Potential,
-Potential,
-Potential,
-Potential,
-Lieutenant,
-FedEx Man,
-Businessman,
-Woman in Red,
-Old Man,
-Blind Man,
-Security Guard,
-Guard,
-Cop Who Captures Neo,
-Big Cop,
-Cop,
-Cop,
-Parking Cop,
-Shaylea,
+chars,Neo,Morpheus,Trinity,Agent Smith,Cypher,Oracle,Tank,Agent Brown,Agent Jones,Apoc,Switch,Dozer,Mouse,DuJour,Rhineheart,Choi,Priestess,Spoon Boy,Potential,Potential,Potential,Potential,Potential,Lieutenant,FedEx Man,Businessman,Woman in Red,Old Man,Blind Man,Security Guard,Cop Who Captures Neo,Cop,Parking Cop
+Neo,0,2,4,3,3,5,2,3,3,2,2,2,2,5,5,5,5,5,0,0,0,0,0,,5,,5,,,3,3,3,5
+Morpheus,2,0,2,3,3,0,2,3,3,2,2,2,2,,,,5,,0,0,0,0,0,,0,,,,,0,3,3,0
+Trinity,4,2,0,3,3,0,2,3,3,2,2,2,2,,,,,,0,0,0,0,0,3,0,,,,,3,3,3,0
+Agent Smith,3,3,3,0,5,0,0,2,2,3,3,3,3,,,,,,0,0,0,0,0,2,0,,,,,0,2,2,0
+Cypher,3,3,3,5,0,0,3,5,5,3,3,3,3,,,,,,0,0,0,0,0,,0,,,,,0,,,0
+Oracle,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Tank,2,2,2,0,3,0,0,0,0,2,2,1,2,,,,,,0,0,0,0,0,,0,,,,,0,,,0
+Agent Brown,3,3,3,2,5,0,0,0,2,3,3,0,3,,,,,,0,0,0,0,0,2,0,,,,,0,2,2,0
+Agent Jones,3,3,3,2,5,0,0,2,0,3,3,0,3,,,,,,0,0,0,0,0,2,0,,,,,0,2,2,0
+Apoc,2,2,2,3,3,0,2,3,3,0,2,2,2,,,,,,0,0,0,0,0,,0,,,,,0,,,0
+Switch,2,2,2,3,3,0,2,3,0,2,0,2,2,,,,,,0,0,0,0,0,,0,,,,,0,,,0
+Dozer,2,2,2,3,3,0,1,0,3,2,2,0,2,,,,,,0,0,0,0,0,,0,,,,,0,,,0
+Mouse,2,2,2,3,3,0,2,3,3,2,2,2,0,,,,,,0,0,0,0,0,,0,,,,,0,,,0
+DuJour,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rhineheart,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Choi,5,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Priestess,5,5,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,5,5,5,5,5,5,,0,,,,,0,,,0
+Spoon Boy,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,,0,,,,,0,,,0
+Potential,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Potential,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Potential,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Potential,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0
+Potential,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Lieutenant,,,,2,,,,2,2,,,,,,,,,,0,0,0,0,0,0,0,,,,,0,,2,0
+FedEx Man,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Businessman,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Woman in Red,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Old Man,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0
+Blind Man,5,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Security Guard,3,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cop Who Captures Neo,3,3,3,2,,,,2,2,,,,,,,,,,0,0,0,0,0,,0,,,,,0,0,,0
+Cop,3,3,3,2,,,,2,2,,,,,,,,,,0,0,0,0,0,2,0,,,,,0,,0,0
+Parking Cop,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
