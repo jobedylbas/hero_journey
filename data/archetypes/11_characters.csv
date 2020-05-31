@@ -1,61 +1,43 @@
-movie_id, character_name, gender, archetype
-11,Luke Skywalker,2
-11,Han Solo,2
-11,Princess Leia Organa,1
-11,Grand Moff Tarkin,2
-11,Obi-Wan "Ben" Kenobi,2
-11,C-3PO,2
-11,R2-D2,2
-11,Chewbacca,2
-11,Darth Vader (performer),2
-11,Darth Vader (voice),2
-11,Uncle Owen,2
-11,Aunt Beru,1
-11,Chief Jawa,2
-11,General Dodonna,2
-11,General Willard,2
-11,Red Leader,2
-11,Red Two (Wedge Antilles),2
-11,Red Three (Biggs Darklighter),2
-11,Red Four (John "D"),2
-11,Red Six (Porkins),2
-11,Gold Leader,2
-11,Gold Two,2
-11,Gold Five,2
-11,General Taggi,2
-11,General Motti,2
-11,Commander #1,2
-11,Stormtrooper,2
-11,Red Two, Wedge Antilles (voice) (uncredited),2
-11,Boba Fett (special edition) (uncredited),2
-11,Stormtrooper (voice) (uncredited),2
-11,Stormtrooper (uncredited),2
-11,Cantina Alien (uncredited),2
-11,Cantina Alien (uncredited),2
-11,Greedo (uncredited),2
-11,Nabrun Leids (uncredited),0
-11,Wuher (uncredited),2
-11,Drifter (Red 12) (uncredited),2
-11,Cantina Patron (uncredited),2
-11,Stormtrooper (uncredited),2
-11,Wioslea (uncredited),0
-11,Dr. Evazan (uncredited),2
-11,Cantina Patron (uncredited),0
-11,Greedo (uncredited),1
-11,Hrchek Kal Fas (uncredited),0
-11,Jawa (uncredited),0
-11,Stormtrooper / Tusken Raider / Death Star Trooper / Garouf Lafoe (uncredited),2
-11,Jawa (uncredited),0
-11,Garindan (uncredited),0
-11,Djas Puhr (uncredited),0
-11,Death Star Trooper (uncredited),2
-11,Stormtrooper with Binoculars (uncredited),0
-11,Cantina Patron (uncredited),2
-11,Death Star Trooper (uncredited),0
-11,Kabe (uncredited),0
-11,Kabe / Jawa / GONK Droid (uncredited),0
-11,Cantina Patron (uncredited),0
-11,Stormtrooper (special edition) (uncredited),0
-11,Stormtrooper (uncredited),0
-11,Leia's Rebel Escort (uncredited),2
-11,Stormtrooper (uncredited),0
+movie_id,character_name,gender,archetype
+11,Luke Skywalker,2,1
+11,Han Solo,2,6
+11,Princess Leia Organa,1,6
+11,Grand Moff Tarkin,2,0
+11,"Obi-Wan ""Ben"" Kenobi",2,4
+11,C-3PO,2,7
+11,R2-D2,2,2
+11,Chewbacca,2,6
+11,Darth Vader,2,8
+11,Uncle Owen,2,0
+11,Aunt Beru,1,0
+11,Nebit,2,0
+11,General Dodonna,2,0
+11,General Willard,2,0
+11,Red Leader,2,0
+11,Red Two (Wedge Antilles),2,0
+11,Red Three (Biggs Darklighter),2,0
+11,"Red Four (John ""D"")",2,0
+11,Red Six (Porkins),2,0
+11,Gold Leader,2,0
+11,Gold Two,2,0
+11,Gold Five,2,0
+11,General Taggi,2,0
+11,General Motti,2,0
+11,Commander #1,2,0
+11,Boba Fett ,2,0
+11,Greedo,2,0
+11,Nabrun Leids,0,0
+11,Wuher,2,0
+11,Red Twelve (Drifter),2,0
+11,Wioslea,0,0
+11,Dr. Evazan,2,0
+11,Hrchek Kal Fas,0,0
+11,Jawa,0,0
+11,Tusken Raider 1,2,0
+11,Tusken Raider 2,2,0
+11,Tusken Raider 3,2,0
+11,Garindan ,0,0
+11,Djas Puhr,0,0
+11,Kabe,0,0
+11,Garouf Lafoe,2,0
+11,Jawa,0,0
