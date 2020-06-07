@@ -1,52 +1,41 @@
-movie_id, character_name, gender, archetype
-70160,Katniss Everdeen,1
-70160,Peeta Mellark,2
-70160,Gale Hawthorne,2
-70160,Haymitch Abernathy,2
-70160,Effie Trinket,1
-70160,Cinna,2
-70160,Caesar Flickerman,2
-70160,President Snow,2
-70160,Seneca Crane,2
-70160,Claudius Templesmith,2
-70160,Cato,2
-70160,Clove,1
-70160,Rue,1
-70160,Primrose Everdeen,1
-70160,Hob Vendor,1
-70160,Katniss' Mother,1
-70160,Registration Woman,1
-70160,Propaganda Film Tribute,0
-70160,Peeta's Mother,1
-70160,Peacekeeper #1,2
-70160,Peacekeeper #2,2
-70160,Peacekeeper #3,2
-70160,Venia,1
-70160,Flavius,2
-70160,Octavia,1
-70160,Thresh,2
-70160,Glimmer,1
-70160,Marvel,2
-70160,Portia,1
-70160,Tribute Boy District 3,2
-70160,Tribute Girl District 3,1
-70160,Tribute Boy District 4,0
-70160,Fox Face,0
-70160,Tribute Girl District 8,1
-70160,Tribute Boy District 9,0
-70160,Tribute Girl District 9,1
-70160,Tribute Girl District 10,0
-70160,Avox Girl,0
-70160,Atala,0
-70160,Birthday Boy,0
-70160,Hovercraft Tech,1
-70160,Game Center Tech #1,2
-70160,Game Center Tech #2,1
-70160,Game Center Tech #3,0
-70160,Game Center Tech,2
-70160,Katniss' Father,0
-70160,Martha (uncredited),1
-70160,Coal Miner (uncredited),0
-70160,Capitol Citizen (uncredited),0
-70160,District 12 Citizen (uncredited),0
-70160,District 12 Resident (uncredited),0
+movie_id,character_name,gender,archetype
+70160,Katniss Everdeen,1,1
+70160,Peeta Mellark,2,6
+70160,Gale Hawthorne,2,
+70160,Haymitch Abernathy,2,3
+70160,Effie Trinket,1,2
+70160,Cinna,2,3
+70160,Caesar Flickerman,2,7
+70160,President Snow,2,
+70160,Seneca Crane,2,5
+70160,Claudius Templesmith,2,
+70160,Cato,2,8
+70160,Clove,1,
+70160,Rue,1,4
+70160,Primrose Everdeen,1,
+70160,Hob Vendor,1,
+70160,Katniss' Mother,1,
+70160,Registration Woman,1,
+70160,Propaganda Film Tribute,0,
+70160,Peeta's Mother,1,
+70160,Venia,1,
+70160,Flavius,2,
+70160,Octavia,1,
+70160,Thresh,2,
+70160,Glimmer,1,
+70160,Marvel,2,
+70160,Portia,1,
+70160,Tribute Boy District 3,2,
+70160,Tribute Girl District 3,1,
+70160,Tribute Boy District 4,0,
+70160,Fox Face,0,
+70160,Tribute Girl District 8,1,
+70160,Tribute Boy District 9,0,
+70160,Tribute Girl District 9,1,
+70160,Tribute Girl District 10,0,
+70160,Avox Girl,0,
+70160,Atala,0,
+70160,Hovercraft Tech,1,
+70160,Katniss' Father,0,
+70160,Martha (uncredited),1,
+70160,Coal Miner (uncredited),0,
