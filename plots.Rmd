@@ -20,13 +20,13 @@ library("ggplot2")
 
 #### Simple Plot
 
-Here we have a plot with Lion King simple relationship. We started from here because is the network with less vertices and also have well defined characters, relationships, archetypes and genders. Some of relationships could be revised.
+Here we have a plot with Matrix simple relationship. We started from here because is the network with less vertices and also have well defined characters, relationships, archetypes and genders. Some of relationships could be revised.
 
 
 ```{r echo=FALSE}
 # Check if data files exists and load them.
-char_filename <- './data/archetypes/_characters.csv'
-lk_re_filename <- './data/relation_types/11_relations.csv'
+char_filename <- './data/archetypes/603_characters.csv'
+lk_re_filename <- './data/relations_types/603_relations_types.csv'
 
 # Load the file that contain gender and archetype of each character
 if(file.exists(char_filename)) {
@@ -35,12 +35,12 @@ if(file.exists(char_filename)) {
 
 # Return a color based on the edge relation number
 edgeColor <- function(number) {
-  switch(number+1, '', 'green', 'blue', 'red')
+  switch(number+1, '', 'green', 'blue', 'red', 'black', 'purple')
 }
 
 # Return a color based on gender number
 genderColor <- function(number) {
-  switch (number, 'red', 'blue', 'yellow')
+  switch (number+1, 'yellow', 'red', 'blue')
 }
 
 if(file.exists(lk_re_filename)) {
@@ -55,8 +55,9 @@ if(file.exists(lk_re_filename)) {
   
   # Find the gender of each vertex and color them
   for(vertexIndex in 1:length(V(g))) {
-    vertexName <- gsub(" ", "", as.character(V(g)[vertexIndex]$name), fixed =T)
+    vertexName <- gsub(".", "", as.character(V(g)[vertexIndex]$name), fixed =T)
     char <- lk_chars[which(gsub(" ", "", (as.character(lk_chars$character_name)), fixed = T) == vertexName), ]
+    print(char)
     if(nrow(char)) {
       V(g)[vertexIndex]$color <- genderColor(char$gender)
     }

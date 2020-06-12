@@ -17,11 +17,11 @@ movie_id,character_name,gender,archetype
 603,Choi,2,0
 603,Priestess,0,0
 603,Spoon Boy,2,0
-603,Potential,1,0
-603,Potential,1,0
-603,Potential,2,0
-603,Potential,1,0
-603,Potential,1,0
+603,Potential 1,1,0
+603,Potential 2,1,0
+603,Potential 3,2,0
+603,Potential 4,1,0
+603,Potential 5,1,0
 603,Lieutenant,2,0
 603,FedEx Man,0,0
 603,Businessman,0,0
