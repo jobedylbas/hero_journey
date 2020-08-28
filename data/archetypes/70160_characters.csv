@@ -1,17 +1,17 @@
 movie_id,character_name,gender,archetype
-70160,Katniss Everdeen,1,
-70160,Peeta Mellark,2,
+70160,Katniss Everdeen,1,1
+70160,Peeta Mellark,2,6
 70160,Gale Hawthorne,2,
-70160,Haymitch Abernathy,2,
-70160,Effie Trinket,1,
-70160,Cinna,2,
-70160,Caesar Flickerman,2,
+70160,Haymitch Abernathy,2,3
+70160,Effie Trinket,1,2
+70160,Cinna,2,3
+70160,Caesar Flickerman,2,7
 70160,President Snow,2,
-70160,Seneca Crane,2,
+70160,Seneca Crane,2,5
 70160,Claudius Templesmith,2,
-70160,Cato,2,
+70160,Cato,2,8
 70160,Clove,1,
-70160,Rue,1,
+70160,Rue,1,4
 70160,Primrose Everdeen,1,
 70160,Hob Vendor,1,
 70160,Katniss' Mother,1,
@@ -37,5 +37,5 @@ movie_id,character_name,gender,archetype
 70160,Atala,0,
 70160,Hovercraft Tech,1,
 70160,Katniss' Father,0,
-70160,Martha,1,
-70160,Coal Miner,0,
+70160,Martha (uncredited),1,
+70160,Coal Miner (uncredited),0,

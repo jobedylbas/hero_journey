@@ -1,43 +1,42 @@
 movie_id,character_name,gender,archetype
-11,Luke Skywalker,2,
-11,Han Solo,2,
-11,Princess Leia Organa,1,
-11,Grand Moff Tarkin,2,
-11,"Obi-Wan ""Ben"" Kenobi",2,
-11,C-3PO,2,
-11,R2-D2,2,
-11,Chewbacca,2,
-11,Darth Vader,2,
-11,Uncle Owen,2,
-11,Aunt Beru,1,
-11,Nebit,2,
-11,General Dodonna,2,
-11,General Willard,2,
-11,Red Leader,2,
-11,Red Two (Wedge Antilles),2,
-11,Red Three (Biggs Darklighter),2,
-11,"Red Four (John ""D"")",2,
-11,Red Six (Porkins),2,
-11,Gold Leader,2,
-11,Gold Two,2,
-11,Gold Five,2,
-11,General Taggi,2,
-11,General Motti,2,
-11,Commander #1,2,
-11,Boba Fett,2,
-11,Greedo,2,
-11,Nabrun Leids,0,
-11,Wuher,2,
-11,Red Twelve (Drifter),2,
-11,Wioslea,0,
-11,Dr. Evazan,2,
-11,Hrchek Kal Fas,0,
-11,Jawa,0,
-11,Tusken Raider 1,2,
-11,Tusken Raider 2,2,
-11,Tusken Raider 3,2,
-11,Garindan,0,
-11,Djas Puhr,0,
-11,Kabe,0,
-11,Garouf Lafoe,2,
-11,Jawa,0,
+11,Luke Skywalker,2,1
+11,Han Solo,2,6
+11,Princess Leia Organa,1,6
+11,Grand Moff Tarkin,2,0
+11,ObiWan Ben Kenobi,2,3
+11,C3PO,2,7
+11,R2D2,2,2
+11,Chewbacca,2,6
+11,Darth Vader,2,8
+11,Uncle Owen,2,0
+11,Aunt Beru,1,0
+11,Nebit,2,0
+11,General Dodonna,2,0
+11,General Willard,2,0
+11,Red Leader,2,0
+11,Red Two Wedge Antilles,2,0
+11,Red Three Biggs Darklighter,2,0
+11,Red Four John D,2,0
+11,Red Six Porkins,2,0
+11,Gold Leader,2,0
+11,Gold Two,2,0
+11,Gold Five,2,0
+11,General Taggi,2,0
+11,General Motti,2,0
+11,Commander 1,2,0
+11,Boba Fett ,2,0
+11,Greedo,2,0
+11,Nabrun Leids,0,0
+11,Wuher,2,0
+11,Red Twelve Drifter,2,0
+11,Wioslea,0,0
+11,Dr Evazan,2,0
+11,Hrchek Kal Fas,0,0
+11,Jawa,0,0
+11,Tusken Raider 1,2,0
+11,Tusken Raider 2,2,0
+11,Tusken Raider 3,2,0
+11,Garindan ,0,0
+11,Kabe,0,0
+11,Garouf Lafoe,2,0
+11,Jawa,0,0

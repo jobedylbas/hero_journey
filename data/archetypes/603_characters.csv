@@ -1,34 +1,34 @@
 movie_id,character_name,gender,archetype
-603,Neo,2,
-603,Morpheus,2,
-603,Trinity,1,
-603,Agent Smith,2,
-603,Cypher,2,
-603,Oracle,1,
-603,Tank,2,
-603,Agent Brown,2,
-603,Agent Jones,2,
-603,Apoc,2,
-603,Switch,1,
-603,Dozer,2,
-603,Mouse,2,
-603,DuJour,1,
-603,Rhineheart,0,
-603,Choi,2,
-603,Priestess,0,
-603,Spoon Boy,2,
-603,Potential,1,
-603,Potential,1,
-603,Potential,2,
-603,Potential,1,
-603,Potential,1,
-603,Lieutenant,2,
-603,FedEx Man,0,
-603,Businessman,0,
-603,Woman in Red,0,
-603,Old Man,2,
-603,Blind Man,0,
-603,Security Guard,0,
-603,Cop Who Captures Neo,0,
-603,Cop,1,
-603,Parking Cop,2,
+603,Neo,2,1
+603,Morpheus,2,3
+603,Trinity,1,2
+603,Agent Smith,2,8
+603,Cypher,2,5
+603,Oracle,1,3
+603,Tank,2,7
+603,Agent Brown,2,0
+603,Agent Jones,2,0
+603,Apoc,2,6
+603,Switch,1,6
+603,Dozer,2,6
+603,Mouse,2,7
+603,DuJour,1,0
+603,Rhineheart,0,0
+603,Choi,2,0
+603,Priestess,0,0
+603,Spoon Boy,2,0
+603,Potential 1,1,0
+603,Potential 2,1,0
+603,Potential 3,2,0
+603,Potential 4,1,0
+603,Potential 5,1,0
+603,Lieutenant,2,0
+603,FedEx Man,0,0
+603,Businessman,0,0
+603,Woman in Red,0,0
+603,Old Man,2,0
+603,Blind Man,0,0
+603,Security Guard,0,0
+603,Cop Who Captures Neo,0,0
+603,Cop,1,0
+603,Parking Cop,2,0
