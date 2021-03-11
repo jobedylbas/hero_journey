@@ -1,0 +1,146 @@
+---
+title: "Hero Journey Data Analysis"
+output: html_notebook
+---
+
+```{r include = F}
+# Check needed packages and install them if needed.
+pkgs <- c("igraph", "ggplot2", 'knitr')
+for (pkg in pkgs) {
+  if(!require(pkg, character.only = TRUE)) {
+    install.packages(pkg)
+    if (!require(pkg, character.only = TRUE)) stop("load failure: ", pkg)
+  }
+}
+
+library("igraph")
+library("ggplot2")
+library("knitr")
+```
+
+```{r include = F}
+# Important global variables
+archetypesPath <- './data/archetypes/'
+archetypesSufix <- '_characters.csv'
+
+relationsPath <- './data/relations_types/'
+relationsSufix <- '_relations_types.csv'
+
+movieNames <- c('Star Wars', 'Spider-man', 'The Matrix', 'Men in Black', 'Hunger Games')
+movieIds <- list('11', '557', '603', '607', '70160')
+
+graphList <- list()
+```
+
+```{r include = F}
+# Important global functions
+
+# Return a color based on the edge relation number
+edgeColor <- function(number) {
+  switch(number+1, '', 'green', 'blue', 'red', 'black', 'purple')
+}
+
+# Return a color based on gender number
+genderColor <- function(number) {
+  switch (number+1, 'yellow', 'red', 'blue')
+}
+
+archetypesColor <- function(number) {
+  switch(number+1, 'white', 'blue', 'red', 'green', 'yellow', 'gray', 'purple', 'orange', 'black')
+}
+```
+
+```{r include = F}
+# Iterate over the files to create the graphs
+for (i in 1:length(movieIds)) {
+  archetypeFilename <- paste(archetypesPath, movieIds[[i]], archetypesSufix, sep = '')
+  graphFilename <- paste(relationsPath, movieIds[[i]], relationsSufix, sep = '')
+  
+  # Load the file that contain gender and archetype of each character
+  if(file.exists(archetypeFilename)) {
+      archetypeTable <- read.csv(archetypeFilename, header = T, sep = ',')
+      archetypeTable[is.na(archetypeTable)] <- 0
+  }
+  
+  if(file.exists(graphFilename)) {
+    graphTable <- read.csv(graphFilename, header = T, sep = ',', row.names = 1)
+    graphTable[is.na(graphTable)] <- 0
+    g <- graph_from_adjacency_matrix(as.matrix(graphTable), mode = c('undirected'),  weighted = T)
+    
+    # Color the edges according relations between vertices
+    for(edgeIndex in 1:length(E(g))) {
+      E(g)[edgeIndex]$color <- edgeColor(E(g)[edgeIndex]$weight)
+    }
+    
+    # Find the gender of each vertex and color them
+    for(vertexIndex in 1:length(V(g))) {
+      vertexName <- gsub(".", "", as.character(V(g)[vertexIndex]$name), fixed =T)
+      char <- archetypeTable[which(gsub(" ", "", (as.character(archetypeTable$character_name)), fixed = T) == vertexName), ]
+      if(nrow(char)) {
+        #V(g)[vertexIndex]$color <- genderColor(char$gender)
+        V(g)[vertexIndex]$color <- archetypesColor(char$archetype)
+      }
+    }
+  }
+  graphList[[i]] <- g
+}
+```
+
+```{r echo = F}
+# Create the data.frame with Network Metrics
+vertexNumbers <- c()
+edgeNumbers <- c()
+archetypesNumber <- c()
+nonArchetypesNumber <- c()
+degs <- c()
+clusterings <- c()
+diameters <- c()
+densities <- c()
+freemanIndex <- c()
+mdds <- c()
+mdbs <- c()
+mdcs <- c()
+sdds <- c()
+sdbs <- c()
+sdcs <- c()
+for (i in 1:length(graphList)) {
+  vertexNumbers[[i]] <- length(V(graphList[[i]]))
+  edgeNumbers[[i]] <- length(E(graphList[[i]]))
+  degs[[i]] <- max(degree(graphList[[i]]))
+  clusterings[[i]] <- transitivity(graphList[[i]])
+  diameters[[i]] <- diameter(graphList[[i]])
+  densities[[i]] <- edge_density(graphList[[i]])
+  tempBiggestComponent <- decompose.graph(graphList[[i]])[[1]]
+  freemanIndex[[i]] <- centr_clo(tempBiggestComponent, mode="all")$centralization
+  sdds[[i]] <- sd(centr_degree(g)$res)
+  mdds[[i]] <- mean(centr_degree(g)$res)
+  sdbs[[i]] <- sd(centr_betw(g)$res)
+  mdbs[[i]] <- mean(centr_betw(g)$res)
+  sdcs[[i]] <- sd(centr_clo(tempBiggestComponent)$res)
+  mdcs[[i]] <- mean(centr_clo(tempBiggestComponent)$res)
+}
+graphsCharacteristcs <- data.frame('movies' = movieNames, 'V' = vertexNumbers, 'E' = edgeNumbers, 'deg' = degs, 'clustering' = clusterings, 'diameter' = diameters, 'density' = densities, 'freemanIndex' = freemanIndex, 'mean_degree'= mdds, 'sd_degree'= sdds, 'mean_closeness' = mdcs, 'sd_closeness' = sdcs, 'mean_betweeness' = mdbs, 'sd_betweeness' = sdbs, stringsAsFactors=F)
+```
+
+```{r echo = F, result = 'asis'}
+kable(graphsCharacteristcs, caption = 'Network Basic Metrics')
+```
+
+
+```{r echo = F, result = 'asis'}
+kable(graphsCharacteristcs[c(1,4,5,6,7)], caption = 'Network Metrics')
+```
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+

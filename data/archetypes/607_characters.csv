@@ -1,46 +1,46 @@
 movie_id, character_name, gender, archetype
-607,Agent K,2
-607,James Edwards / Agent J,2
-607,Dr. Laurel Weaver / Agent L,1
-607,Edgar / The Bug,2
-607,Chief Zed,2
-607,Jack Jeebs,2
-607,Beatrice,1
-607,Gentle Rosenburg the Arquillian Jeweler,2
-607,Van driver,2
-607,Jose,2
-607,Arquillian,2
-607,INS agent Janus,2
-607,Agent D,2
-607,2nd Lt. Jake Jensen,2
-607,Mikey,2
-607,Perp,2
-607,Zap-Em Man,2
-607,Mr. Redgick,2
-607,Mrs. Redgick,1
-607,Passport Officer,2
-607,News Vendor,2
-607,Cop in Morgue,0
-607,Police Inspector,0
-607,Tow Truck Driver,2
-607,Morgue Attendant,2
-607,MIB Agent Bee,2
-607,Cook,0
-607,INS Agent,0
-607,INS Agent,0
-607,NYPD sergeant,2
-607,Security Guard,0
-607,Mrs. Edelson,0
-607,Baseball Player,0
-607,First Contact Alien,0
-607,First Contact Alien,0
-607,2nd First Contact Alien,0
-607,Alien Father,1
-607,Alien Son,2
-607,Scared Guy,0
-607,Frank the Pug (voice),2
-607,Rosenberg Alien (voice),0
-607,Worm Guy (voice),2
-607,Worm Guy (voice),0
-607,Worm Guy (voice),0
-607,Worm Guy (voice),0
+607,Agent K,2,3
+607,James Edwards Agent J,2,1
+607,Dr. Laurel Weaver Agent L,1,6
+607,Edgar The Bug,2,8
+607,Chief Zed,2,6
+607,Jack Jeebs,2,2
+607,Beatrice,1,0
+607,Gentle Rosenburg the Arquillian Jeweler,2,4
+607,Van driver,2,0
+607,Jose,2,0
+607,Arquillian,2,0
+607,INS agent Janus,2,0
+607,Agent D,2,0
+607,2nd Lt. Jake Jensen,2,0
+607,Mikey,2,0
+607,Perp,2,0
+607,Zap-Em Man,2,0
+607,Mr. Redgick,2,0
+607,Mrs. Redgick,1,0
+607,Passport Officer,2,0
+607,News Vendor,2,0
+607,Cop in Morgue,0,0
+607,Police Inspector,0,0
+607,Tow Truck Driver,2,0
+607,Morgue Attendant,2,0
+607,MIB Agent Bee,2,0
+607,Cook,0,0
+607,INS Agent,0,0
+607,INS Agent,0,0
+607,NYPD sergeant,2,0
+607,Security Guard,0,0
+607,Mrs. Edelson,0,0
+607,Baseball Player,0,0
+607,First Contact Alien,0,0
+607,First Contact Alien,0,0
+607,2nd First Contact Alien,0,0
+607,Alien Father,1,0
+607,Alien Son,2,0
+607,Scared Guy,0,0
+607,Frank the Pug (voice),2,6
+607,Rosenberg Alien (voice),0,0
+607,Worm Guy (voice),2,6
+607,Worm Guy (voice),0,6
+607,Worm Guy (voice),0,6
+607,Worm Guy (voice),0,6

@@ -16,6 +16,7 @@ for (pkg in pkgs) {
 
 library("igraph")
 library("ggplot2")
+library("knitr")
 ```
 
 #### Simple Plot
@@ -25,22 +26,13 @@ Here we have a plot with Matrix simple relationship. We started from here becaus
 
 ```{r echo=FALSE}
 # Check if data files exists and load them.
-char_filename <- './data/archetypes/603_characters.csv'
-lk_re_filename <- './data/relations_types/603_relations_types.csv'
+char_filename <- './data/archetypes/70160_characters.csv'
+lk_re_filename <- './data/relations_types/70160_relations_types.csv'
 
 # Load the file that contain gender and archetype of each character
 if(file.exists(char_filename)) {
     lk_chars <- read.csv(char_filename, header = T, sep = ',')
-}
-
-# Return a color based on the edge relation number
-edgeColor <- function(number) {
-  switch(number+1, '', 'green', 'blue', 'red', 'black', 'purple')
-}
-
-# Return a color based on gender number
-genderColor <- function(number) {
-  switch (number+1, 'yellow', 'red', 'blue')
+    lk_chars[is.na(lk_chars)] <- 0
 }
 
 if(file.exists(lk_re_filename)) {
@@ -52,35 +44,220 @@ if(file.exists(lk_re_filename)) {
   for(edgeIndex in 1:length(E(g))) {
     E(g)[edgeIndex]$color <- edgeColor(E(g)[edgeIndex]$weight)
   }
-  
   # Find the gender of each vertex and color them
   for(vertexIndex in 1:length(V(g))) {
     vertexName <- gsub(".", "", as.character(V(g)[vertexIndex]$name), fixed =T)
     char <- lk_chars[which(gsub(" ", "", (as.character(lk_chars$character_name)), fixed = T) == vertexName), ]
-    print(char)
     if(nrow(char)) {
-      V(g)[vertexIndex]$color <- genderColor(char$gender)
+      #V(g)[vertexIndex]$color <- genderColor(char$gender)
+      V(g)[vertexIndex]$color <- archetypesColor(char$archetype)
     }
   }
-  
-  g$layout <- layout_components
-  
 }
 # Plot the graph
-plot(g)
+relationsTypes<- c('Family', 'Friend', 'Disaffection', 'Lover', 'Other')
+g$layout <- layout_as_star
+plot(g, vertex.label = NA, vertex.size = 10)
+legend('topright', title ='Archetypes', legend=c('None', 'Hero', 'Herald', 'Mentor', 'Guardian', 'Shapeshifter', 'Ally', 'Trickster', 'Shadow'), pch=21, col = 'black', pt.bg = c('white', 'blue', 'red', 'green', 'yellow', 'gray', 'purple', 'orange', 'black'), pt.cex = 1.5)
+legend('topleft', title = 'Relation Type', legend= relationsTypes, col = c('green', 'blue', 'red', 'black', 'purple'), lwd=1)
+#assortativity_degree(g, directed = F)
+#transitivity(g)
+#diameter(g)
+#edge_density(g)
+
+#geingen <- centr_eigen(g)
+#geingen <- geingen$vector
+
+#g$layout <- layout_in_circle
+#plot(g, vertex.size=(30*geingen)/max(geingen))
+deg <- max(centr_degree(g)$res)
+
+sdd <- sd(centr_degree(g)$res)
+mdd <- mean(centr_degree(g)$res)
+
+sdb <- sd(centr_betw(g)$res)
+mdb <- mean(centr_betw(g)$res)
+g <- decompose.graph(g)[[1]]
+sdc <- sd(centr_clo(g)$res)
+mdc <- mean(centr_clo(g)$res)
+#plot(g, vertex.label=NA, main="Degree", vertex.size=(0.5*gdegree)/max(gdegree))
+##betweenness(g, v = V(g)[2:length(V(g))])
+#centr_degree(g)$centralization
+#centr_clo(decompose.graph(g)[[1]])$centralization
+#centr_betw(g, directed = FALSE)$centralization
+#centr_eigen(g, directed=FALSE)$centralization
+```
+
+```{r echo=FALSE}
+sort(degree(g))
+d = max(degree(g))
+n = length(V(g))
+
+d/(n-1)
+
+centr_degree(g)$centralization
+centr_clo(g, mode="all")$centralization
+centr_betw(g)$centralization
+
 ```
 
 
 ### Plot with communities
 
 ```{r echo=F}
-c <- cluster_louvain(g)
-c <- cluster_fast_greedy(g)
-c <- cluster_infomap(g)
-c <- cluster_spinglass(g)
-c <- cluster_optimal(g)
-c <- cluster_walktrap(g)
+plot(g, vertex.label = NA, vertex.size = 10)
+  g <- decompose.graph(g)[[1]]
 c <- cluster_leading_eigen(g)
-triad_census(g)
-plot(c, g)
+c <- cluster_label_prop(g)
+c <- cluster_spinglass(g)
+#c <- cluster_louvain(g)
+#length(c)
+#c <- cluster_fast_greedy(g)
+#length(c)
+#c <- cluster_infomap(g)
+#length(c)
+#c <- cluster_walktrap(g)
+#length(c)
+plot(g, vertex.color=membership(c), vertex.label = NA, vertex.size = 10)
+#legend('topright', title ='Archetypes', legend=c('None', 'Hero', 'Herald', 'Mentor', 'Guardian', 'Shapeshifter', 'Ally', 'Trickster', 'Shadow'), pch=21, col = 'black', pt.bg = c('white', 'blue', 'red', 'green', 'yellow', 'gray', 'purple', 'orange', 'black'), pt.cex = 1.5)
+#legend('topleft', title = 'Relation Type', legend= relationsTypes, col = c('green', 'blue', 'red', 'black', 'purple'), lwd=1)
+
+movies = c("Star Wars", "Men in Black", "The Matrix", "Spider-man", "Hunger Games")
+y = c(0.85, 0.42, 0.78, 0.71, 0.89)
+d = data.frame("Movies" = movies, "Value" = y)
+d
+p <- ggplot(d, aes(x = d$Movies, y = d$Value)) + geom_bar(stat = "identity", width = 0.7, fill = "steelblue") + 
+  labs(x = "Movies", y = "Value") +
+  theme(panel.background = element_rect(fill = "white", colour = "black", size = 1),
+        panel.grid.major.y = element_line(colour = "gray50", size = 0.3),
+        panel.grid.minor.y = element_line(colour = "gray50", size = 0.1),
+        panel.grid.minor.x = element_blank(),
+        panel.grid.major.x = element_blank()) +
+  scale_y_continuous(limits = c(0,1), expand = c(0,0.002), breaks = c(0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1))
+  
+p
 ``` 
+
+
+````{r echo=F}
+family <- 0
+friends <- 0
+notfriend <- 0
+lover <- 0
+other <- 0
+ed <- E(g)[from(V(g)[1])]
+for(i in 1:length(ed)) {
+  switch (ed[i]$weight+1,
+    print(''),
+    family <- family + 1,
+    friends <- friends + 1,
+    notfriend <- notfriend + 1,
+    lover <- lover + 1,
+    other <- other + 1
+  )
+}
+degree(g)
+family*35/max(degree(g))
+friends*35/max(degree(g))
+lover*35/max(degree(g))
+notfriend*35/max(degree(g))
+other*35/max(degree(g))
+
+family/degree(g)[2]
+friends/degree(g)[2]
+lover/degree(g)[2]
+notfriend/degree(g)[2]
+other/degree(g)[2]
+
+movies = c("Star Wars", "Men in Black", "The Matrix", "Spider-man", "Hunger Games")
+d = data.frame("Movies" = movies)
+d["Family"] =       c(0.05882353, 0     , 0   , 0.05714286, 0.09090909)
+d["Friend"] =       c(0.50000000, 0.0625, 0.24, 0.02857143, 0.1818182)
+d["Lover"] =        c(0         , 0.0625, 0.04, 0.02857143, 0)
+d["Disagreement"] = c(0.29411760, 0.1875, 0.32, 0.2285714, 0.3636364)
+d["Other"] =        c(0.14705880, 0.6875, 0.40, 0.6571429, 0.3636364)
+
+library(reshape2)
+cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+dm <- melt(d, id = c("Movies"))
+
+ggplot(dm, aes(x = dm$Movies, y = dm$value)) + geom_bar(stat = "identity", aes(fill = dm$variable), width = 0.7) + scale_fill_manual(values=rev(cbPalette)) + labs(x = "Movies", y = "Proportion Rate", fill = "Relation Type") +
+  theme(panel.background = element_rect(fill = "white", colour = "black", size = 1),
+        panel.grid.major.y = element_line(colour = "gray50", size = 0.3),
+        panel.grid.minor.y = element_line(colour = "gray50", size = 0.1),
+        panel.grid.minor.x = element_blank(),
+        panel.grid.major.x = element_blank()) +
+  scale_y_continuous(expand = c(0.002,0), breaks = c(0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1))
+  
+```
+````{r echo=F}
+family <- 0
+friends <- 0
+notfriend <- 0
+lover <- 0
+other <- 0
+for(i in 1:length(E(g))) {
+  switch (E(g)[i]$weight+1,
+    print(''),
+    family <- family + 1,
+    friends <- friends + 1,
+    notfriend <- notfriend + 1,
+    lover <- lover + 1,
+    other <- other + 1
+  )
+}
+
+family/length(E(g))
+friends/length(E(g))
+lover/length(E(g))
+notfriend/length(E(g))
+other/length(E(g))
+
+movies = c("Star Wars", "Men in Black", "The Matrix", "Spider-man", "Hunger Games")
+d = data.frame("Movies" = movies)
+d["Family"] =       c(0.006410256, 0.03947368, 0.009433962, 0.07142857, 0.02262443)
+d["Friend"] =       c(0.5865385  , 0.1184211 , 0.3773585  , 0.07142857, 0.1176471)
+d["Lover"] =        c(0          , 0.01315789, 0.01886792 , 0.01190476, 0)
+d["Disagreement"] = c(0.349359   , 0.1578947 , 0.3584906  , 0.1904762 , 0.4841629)
+d["Other"] =        c(0.05769231 , 0.6710526 , 0.2358491  , 0.6547619 , 0.3755656)
+
+library(reshape2)
+cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+dm <- melt(d, id = c("Movies"))
+
+ggplot(dm, aes(x = dm$Movies, y = dm$value)) + geom_bar(stat = "identity", aes(fill = dm$variable), width = 0.7) + scale_fill_manual(values=rev(cbPalette)) + labs(x = "Movies", y = "Proportion Rate", fill = "Relation Type") +
+  theme(panel.background = element_rect(fill = "white", colour = "black", size = 1),
+        panel.grid.major.y = element_line(colour = "gray50", size = 0.3),
+        panel.grid.minor.y = element_line(colour = "gray50", size = 0.1),
+        panel.grid.minor.x = element_blank(),
+        panel.grid.major.x = element_blank()) +
+  scale_y_continuous(expand = c(0.002,0), breaks = c(0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1))
+
+# create new coord : inherit coord_polar
+coord_radar <- 
+  function(theta='x', start=0, direction=1){
+    # input parameter sanity check
+    match.arg(theta, c('x','y'))
+
+    ggproto(
+      NULL, CoordPolar, 
+      theta=theta, r=ifelse(theta=='x','y','x'),
+      start=start, direction=sign(direction),
+      is_linear=function() TRUE)
+  }
+
+
+ggplot(dm, aes(x = dm$variable, y = dm$value, colour = dm$Movies, group = 1)) + 
+  geom_point(size=rel(0.9)) +
+  geom_path() +
+  coord_radar() + 
+  
+  geom_hline(aes(yintercept=0), lwd=1, lty=2) + 
+  scale_y_continuous(expand = c(0.002,0), breaks = c(0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1))
+
+```
+
+````{r echo=F}
+g <- decompose.graph(g)[[1]]
+centr_clo(g, mode="all")$centralization
+```
